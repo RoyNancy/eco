@@ -1,0 +1,110 @@
+<html>
+<head>
+<script type="text/javascript">
+  function validation()
+   {
+      with(document.myform)
+       {
+          if(username.value==" ")
+              {
+                   alert("please fill the username")
+                    username.value=""
+                     username.focus();return ;
+              }
+              i=0;
+                   while(i<username.value.length)
+                              {
+                                  ch=username.value.charAt(i)
+                                       if(!(((ch>="a")&&( ch<="z"))||((ch>="A")&& (ch<="Z"))|| (ch==" ")))
+                                         {
+                                                alert("please  enter the alphabate symbol")
+                                                 username.value=""
+                                                  username.focus();return
+                                       }  
+                              i++;
+                             } 
+                 
+                    if(age.value=="")
+                            {
+                                 alert("plase fill phone number feild")
+                                  age.value=""
+                                  age.focus();
+                                  return
+                            }
+                    if(isNaN(age.value))
+                             {
+                                  alert("enter numerica value")
+                                   age.value=""
+                                   age.focus();
+                                   return
+                             }
+                   if(email.value=="")
+                             { 
+                                     alert("plase fill email feild")
+                                  email.value=""
+                                  email.focus();
+                                  return
+                                
+                            }
+                     if(email.value.indexOf("@")==-1)
+                          {
+                               alert("please fill at least @ symbol")
+                                  email.value=""
+                                  email.focus();
+                                  return
+                          }
+                
+             
+           
+       } alert("thank for filling he infirmation")
+    }
+</script>
+<style>
+
+#outer{
+align:center;
+margin-left:36%;
+margin-top:10%;
+margin-right:35%;
+
+background-color:rgba(0,0,0,0.2);
+}
+#inner{
+margin-left:25%;
+}
+#button{
+color:yellow;
+background-color:orange;
+margin-left:18%;
+height:30px;
+width:90px;
+border-radius:10px;
+}
+</style>
+</head>
+<body >
+<div id="outer">
+<div id="inner">
+<h3>Resister Here</h3>
+<form name=myform>
+Name:<br><input type="textfeild" name="username" placeholder="Username"><br><br>
+Phone Number:<br><select name="91">
+<option >504</option>
+<option >872</option>
+<option >36</option>
+<option >354</option>
+<option >98</option>
+<option >62</option>
+<option >964</option>
+<option >353</option>
+<option >972</option>
+</select>
+<input type="text" placeholder="Phone Number" name="age"><br><br>
+Email: <br><input type="textfeild" name="email" placeholder="Email"><br><br>
+Password:<br><input type="password" placeholder="Password"><br> <br>
+<input type="button" value="Submit" id="button"onclick="validation();">
+</form>
+</div>
+</div>
+</body>
+</html>

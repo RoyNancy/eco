@@ -1,0 +1,74 @@
+--""<html>
+<head>
+<script type="text/javascript">
+function abc(){
+with(document.myform){
+  if(username.value==""){
+alert("please fill the username");
+ username.value=""
+   username.focus();
+    return ;
+  }
+ if(password.value==""){
+alert("please fill the password");
+ password.value=""
+   password.focus();
+return ;
+}
+} alert("thank for Login");
+}
+</script>
+<style>
+body{
+background-image:url('background1.jpg');
+width:100%;
+}
+#asd{
+height:25px;
+width:150px;
+background-color:darkblue;
+margin-left:15%;
+border-radius:10px;
+color:white;
+
+}
+#outer{
+background-color:pink;
+margin-left:35%;
+margin-right:35%;
+margin-top:10%;
+margin-below:320%;
+height:45%;
+width:30%;
+
+}
+#inner{
+margin-left:30%;
+margin-right:10%;
+margin-top:25%;
+color:black;
+height: 25%;
+width: 40%;
+
+align:centre;
+}
+h3{
+color:darkgreen;
+}
+</style>
+</head>
+<body>
+
+<div id="outer">
+<div id="inner">
+<h3>LOGIN FORM</h3>
+<form name=myform>
+Username:<br><input type="text" placeholder="Username" name="username"><br><br>
+Password: <br><input type="password"  placeholder="Password" name="password"><br><br>
+<input  id="asd" type="button" value="submit" onclick="abc();" >
+<a href="slide1.html"><input  id="asd" type="button" value="Back"  ></a>
+</form>
+</div>
+</div>
+</body>
+</html>
